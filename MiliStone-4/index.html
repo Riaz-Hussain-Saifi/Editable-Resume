@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editable Resume Builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Main heading of the form -->
+    <h1>Editable Resume Builder Form </h1>
+    <h2> By Riaz Hussain</h2>
+
+    <!-- Resume Form -->
+    <form id="resume-form">
+      <!-- Profile Section -->
+      <fieldset id="resume-profile">
+        <legend id="profile">Profile</legend>
+        <br />
+        <label for="profilePic">Profile Picture</label>
+        <input type="file" name="profilePic" id="profilePicInput" accept="JPG, PNG" />
+        <br /><br />
+        <label for="fullName">Full Name</label>
+        <input type="text" name="fullName" id="name" placeholder="Enter Your Full Name" required />
+        <br /><br />
+        <label for="profession">Enter your profession</label>
+        <input type="text" name="profession" id="whoAreYou" required placeholder="What is your profession?" />
+        <br /><br />
+        <label for="summary">Summary</label>
+        <textarea id="summary" rows="4" placeholder="Write a brief summary about yourself."></textarea>
+      </fieldset>
+      <hr />
+
+      <!-- Contact Information Section -->
+      <fieldset id="contact-form">
+        <legend>Contact Information</legend>
+        <br />
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" placeholder="Email" required />
+        <br /><br />
+        <label for="phone">Mobile Number</label>
+        <input type="number" name="phone" id="phone" placeholder="Phone Number" required />
+        <br /><br />
+        <label for="github">GitHub Profile</label>
+        <input type="url" id="github" name="github" placeholder="Enter GitHub link" />
+        <br /><br />
+        <label for="linkedin">LinkedIn Profile</label>
+        <input type="url" id="linkedin" name="linkedin" placeholder="Enter Linkedin profile link" />
+        <br /><br />
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3" placeholder="Enter your address"></textarea>
+      </fieldset>
+      <hr />
+
+      <!-- Education Section -->
+      <fieldset id="education-form">
+        <legend>Education</legend>
+        <br />
+        <label for="educationSite">Education site</label>
+        <input type="text" id="educationSite" name="educationSite" placeholder="Where did you study?" required />
+        <br /><br />
+        <label for="degree">Degree or high education</label>
+        <input type="text" id="degree" name="degree" placeholder="Enter high education" required />
+        <br /><br />
+        <label for="graduationYear">Graduation Year</label>
+        <input type="number" id="graduationYear" maxlength="4" step="1" min="1900" max="2100" placeholder="Enter Graduation Year" required />
+        <br /><br />
+        <label for="educationDescription">Education Description</label>
+        <textarea id="educationDescription" rows="3" placeholder="Write something about your education."></textarea>
+      </fieldset>
+      <hr />
+
+      <!-- Work Experience Section -->
+      <fieldset id="work-experience-form">
+        <legend>Work Experience</legend>
+        <br />
+        <label for="company">Company/ Organization</label>
+        <input type="text" id="companyName" name="company" placeholder="Company / Organization Name" required />
+        <br /><br />
+        <label for="designation">Designation</label>
+        <input type="text" id="designation" name="designation" placeholder="Designation" required />
+        <br /><br />
+        <label for="status">What is your current status</label>
+        <input type="text" id="status" name="status" placeholder="Enter your current status in your organization" required />
+        <br /><br />
+        <label for="joingYear">Joing Month Year</label>
+        <input type="month" id="startDate" name="joingYear" required />
+        <br /><br />
+        <label for="endYear">End Month Year</label>
+        <input type="month" id="endYear" name="endYear" />
+        <br /><br />
+        <label for="workDescription">Work Description</label>
+        <textarea id="workDescription" rows="3" placeholder="Write something about your work."></textarea>
+      </fieldset>
+      <hr />
+
+      <!-- Skills Section -->
+      <fieldset id="skills-form">
+        <legend>Skills</legend>
+        <br />
+        <label for="skills">Skills</label>
+        <input type="text" name="skills" id="skills" placeholder="Enter your skills separated by commas (eg. HTML, CSS, JavaScript)" required />
+      </fieldset>
+      <hr />
+
+      <!-- Additional Information Section -->
+      <fieldset id="additional-information-form">
+        <legend>Additional Information</legend>
+        <br />
+        <label for="gender">Gender</label>
+        <select name="gender" id="gender" required>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+        <br /><br />
+        <label for="maritalStatus">Marital Status</label>
+        <select name="maritalStatus" id="maritalStatus" required>
+          <option value="Single">Single</option>
+          <option value="Married">Married</option>
+          <option value="Engaged">Engaged</option>
+          <option value="Divorced">Divorced</option>
+          <option value="Widow">Widow</option>
+          <option value="Widower">Widower</option>
+          <option value="Separated">Separated</option>
+          <option value="Annulled">Annulled</option>
+        </select>
+        <br /><br />
+        <label for="hobies">Hobies</label>
+        <input type="text" id="hobies" name="hobies" placeholder="Enter your hobies separated by commas (eg. Reading, Sleeping, Writing)" />
+        <br /><br />
+        <label for="languages">Languages</label>
+        <input type="text" id="languages" name="languages" placeholder="Enter your languages separated by commas (eg. English, Hindi, Spanish)" />
+        <br /><br />
+        <label for="futurePlan">What's your future plan?</label>
+        <textarea name="futurePlan" id="futurePlan" rows="4" placeholder="Enter your future plans"></textarea>
+      </fieldset>
+      
+      <button type="submit">Generate Resume</button>
+      <button type="reset" style="background-color: red; color: white; border-radius: 8px;">Reset Form</button>
+      <hr />
+    </form>
+
+    <div id="resumeOutput" style="display:none;">
+      <!-- Generated resume will appear here -->
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
